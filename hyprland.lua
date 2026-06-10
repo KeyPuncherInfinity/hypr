@@ -7,6 +7,8 @@ require("modules.input")
 require("modules.animation")
 require("modules.window")
 
+default_style()
+
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
