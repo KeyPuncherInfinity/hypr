@@ -6,7 +6,7 @@ local ctrl = "CTRL"
 local plus = " + "
 
 -- Set programs that you use
-local terminal    = "kitty"
+local terminal    = "wezterm"
 local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 
@@ -34,6 +34,8 @@ hl.bind(simple_mod("BackSpace"), hl.dsp.exec_cmd(fileManager))
 hl.bind(simple_mod("C"), hl.dsp.window.close())
 hl.bind(simple_mod("X"), hl.dsp.window.kill())
 hl.bind(shift_mod("P"), hl.dsp.exec_cmd("playerctl play-pause"))
+hl.bind(shift_mod("BracketLeft"), hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- 1 1.5"), {repeating = true})
+hl.bind(shift_mod("BracketRight"), hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+ 1 1.5"), {repeating = true})
 
 
 -- switch workspace and window
